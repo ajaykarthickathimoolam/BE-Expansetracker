@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: expense-tracker
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/expensetracker}
+  threads:
+    virtual:
+      enabled: ${SPRING_THREADS_VIRTUAL_ENABLED:true}
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET:dev-jwt-secret-change-me-in-production-min-256-bits}
+  expiration-ms: 86400000
